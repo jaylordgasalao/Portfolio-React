@@ -11,11 +11,11 @@ export default function ProjectHolder({ limit, isHome }: Props) {
   const [searchProject, setSearchProject] = useState("")
   const projects = [
     {
-      title: "Fast Kaon",
+      title: "My Previous Portfolio",
       description:
-        "A simple restaurant menu website built using HTML and CSS. It features a clean and responsive design that allows users to easily browse food items and view menu details in a fast and user-friendly interface.",
-      link: "/",
-      image: "../../../assets/default-image.png",
+        "A portfolio built using Html, CSS, and JavaScript. It showcases my skills and projects in a visually appealing way.",
+      link: "https://jaylord-gasalao-portfolio.netlify.app/",
+      image: "../../../assets/project1.jpg",
     },
   ]
 
@@ -84,7 +84,7 @@ export default function ProjectHolder({ limit, isHome }: Props) {
                 <div key={i} className="flex h-full">
                   <ProjectCard
                     ImageSrc={project.image}
-                    ImageAlt={`${project.title} cover image`}
+                    ImageAlt={`${project.title}`}
                     ProjectTitle={project.title}
                     ProjectDescription={project.description}
                     ProjectLink={project.link}

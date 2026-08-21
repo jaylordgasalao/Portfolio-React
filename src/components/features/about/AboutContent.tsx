@@ -62,9 +62,9 @@ export default function AboutPage() {
 
   const Contacts: ContactType[] = [
     {
-      name: "romelbalungag@gmail.com",
+      name: "jaylordgasalao934@gmail.com",
       icon: Mail,
-      link: "mailto:romelbalungag@gmail.com",
+      link: "mailto:jaylordgasalao934@gmail.com",
     },
     {
       name: "Cebu, Philippines",
@@ -86,7 +86,6 @@ export default function AboutPage() {
   const backend = [
     "Node.js",
     "Express.js",
-    "MongoDB",
     "MySQL",
   ]
 
@@ -108,7 +107,7 @@ export default function AboutPage() {
           <p className="text-justify text-sm leading-6 text-gray-800 sm:text-base dark:text-gray-300">
             Hi there, I’m{" "}
             <span className="mx-1 rounded-md border border-gray-200 bg-gray-50 px-2 py-1 text-xs dark:border-gray-600 dark:bg-[#333333] dark:text-gray-300">
-              Romel Balungag
+              Jaylord Gasalao
             </span>
             , an Information Technology student and aspiring developer
             focused on frontend web development.

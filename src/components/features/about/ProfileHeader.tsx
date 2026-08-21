@@ -23,7 +23,7 @@ export default function ProfileHeader() {
               Romel Balungag
             </h1>
             <p className="sm:text-md text-sm text-red-700 italic dark:text-gray-400">
-              Aspiring Web Developer
+              Growing Developer
             </p>
           </div>
         </div>
