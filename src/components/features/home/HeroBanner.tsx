@@ -23,7 +23,7 @@ export default function Hero() {
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#176b63]">Hello, I’m Jaylord</p>
 
           <h1 className="mt-3 max-w-xl text-4xl leading-[1.05] font-bold tracking-tight text-[#1d2927] sm:text-5xl lg:text-6xl">
-            I make the web feel a little more human.
+            Always learning, always creating.
           </h1>
 
           <p className="mt-4 max-w-lg text-base leading-7 text-[#52605b] sm:text-lg">
