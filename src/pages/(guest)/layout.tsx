@@ -12,14 +12,14 @@ const pages = [
 
 export default function GuestLayout() {
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <Header pages={pages} />
 
-      <main className="flex-1 px-25 py-10">
+      <main className="mx-auto w-full max-w-6xl flex-1 px-5 py-10 sm:px-8 lg:px-10 lg:py-16">
         <Outlet />
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }

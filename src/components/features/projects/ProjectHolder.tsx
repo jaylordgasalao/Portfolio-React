@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ProjectCard from "./ProjectCard"
 import { Search } from "lucide-react"
+import ProjectImage from "../../../assets/project1.jpg"
 
 type Props = {
   limit: boolean
@@ -13,9 +14,9 @@ export default function ProjectHolder({ limit, isHome }: Props) {
     {
       title: "My Previous Portfolio",
       description:
-        "A portfolio built using Html, CSS, and JavaScript. It showcases my skills and projects in a visually appealing way.",
+        "A responsive portfolio built with HTML, CSS, and JavaScript to present my work with a clear, focused interface.",
       link: "https://jaylord-gasalao-portfolio.netlify.app/",
-      image: "../../../assets/project1.jpg",
+      image: ProjectImage,
     },
   ]
 
@@ -27,21 +28,20 @@ export default function ProjectHolder({ limit, isHome }: Props) {
     return matchesSearch
   })
 
-  let loading = "Oops, loading please wait a moment..."
+  const loading = "No projects match that search yet."
 
   return (
     <div className="mt-10">
       {isHome && (
         <div className="mt-16 mb-10 md:mt-32 lg:mt-40">
           <div className="flex flex-col items-center gap-3">
-            <h3 className="text-gray-800">Recent Project</h3>
-            <h1 className="flex items-center gap-2 text-center text-2xl leading-tight font-bold sm:text-3xl md:text-4xl dark:text-gray-100">
-              Check out my recent work
+            <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#176b63]">Selected work</h3>
+            <h1 className="flex items-center gap-2 text-center text-2xl leading-tight font-bold text-[#1d2927] sm:text-3xl md:text-4xl">
+              A small collection of things I’ve built
             </h1>
 
-            <p className="max-w-xl text-center text-sm text-gray-700 sm:text-base dark:text-gray-300">
-              I’ve worked on diverse web projects, combining creativity and
-              functionality. Take a look at some of my standout work.
+            <p className="max-w-xl text-center text-sm leading-6 text-[#60706a] sm:text-base">
+              Practical projects where thoughtful layouts, accessible interactions, and clean code work together.
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function ProjectHolder({ limit, isHome }: Props) {
       ) : (
         <>
           <h1
-            className={`mt-10 text-base font-medium md:text-lg dark:text-gray-100 ${
+            className={`mt-10 text-base font-bold text-[#1d2927] md:text-lg ${
               limit ? "hidden" : "block"
             }`}
           >
@@ -70,7 +70,7 @@ export default function ProjectHolder({ limit, isHome }: Props) {
                 <input
                   type="text"
                   placeholder="Search projects..."
-                  className="w-full rounded-md border border-gray-400 bg-gray-50 py-2 pr-4 pl-10 transition-all duration-200 focus:border-transparent focus:bg-white focus:ring-2 focus:ring-gray-800 focus:outline-none dark:border-gray-600 dark:bg-[#333333]"
+                  className="w-full rounded-full border border-[#b9c9c1] bg-white py-3 pr-4 pl-10 text-sm outline-none transition focus:border-[#176b63] focus:ring-2 focus:ring-[#c9ddd4]"
                   value={searchProject}
                   onChange={(e) => setSearchProject(e.target.value)}
                 />
@@ -95,15 +95,14 @@ export default function ProjectHolder({ limit, isHome }: Props) {
           </div>
 
           <div>
-            <p className={`font-medium ${!limit ? "hidden" : "block"}`}>Explore more</p>
+            <p className={`font-medium text-[#52605b] ${!limit ? "hidden" : "block"}`}>Explore more</p>
             <a
               href={"/projects"}
               className={`flex items-center justify-center gap-1 md:justify-start ${
                 !limit ? "hidden" : "flex"
               }`}
             >
-              <h1 className="md:text-md text-left text-sm dark:text-gray-200 border bg-black 
-              text-white px-3 py-2 rounded-md hover:bg-[#222222]">
+              <h1 className="rounded-full border border-[#b9c9c1] bg-[#1d2927] px-4 py-2 text-left text-sm text-white hover:bg-[#176b63]">
                 See all projects
               </h1>
             </a>

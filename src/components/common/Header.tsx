@@ -12,22 +12,22 @@ interface HeaderProps {
 
 export function Header({ pages }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-30 shadow bg-white">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-6 md:px-6 lg:px-8">
+    <header className="border-b border-[#dce5df] bg-[#f6f8f5]/95">
+      <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-5 px-5 py-5 sm:flex-row sm:items-center sm:px-8 lg:px-10">
         <div>
-          <h1 className="text-lg font-bold tracking-tight text-black md:text-xl">Jaylord Gasalao</h1>
-          <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-gray-600">Developer in Progress</p>
+          <h1 className="text-lg font-bold tracking-tight text-[#1d2927]">Jaylord Gasalao</h1>
+          <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#176b63]">Frontend developer</p>
         </div>
 
-        <nav className="flex items-center gap-1 bg-white" aria-label="Main navigation">
+        <nav className="flex flex-wrap items-center gap-1" aria-label="Main navigation">
           {pages.map((page) => (
             <NavLink
               key={page.id}
               to={page.path}
               className={({ isActive }) =>
                 isActive
-                  ? "border-b-2 px-5 py-2 text-sm font-medium transition-colors duration-200"
-                  : "px-5 py-2 text-sm font-medium text-black transition-colors duration-200 border-b-2 border-transparent hover:border-black"
+                  ? "rounded-full bg-[#1d2927] px-4 py-2 text-sm font-medium text-white transition-colors"
+                  : "rounded-full px-4 py-2 text-sm font-medium text-[#52605b] transition-colors hover:bg-[#e5eee8] hover:text-[#1d2927]"
               }
             >
               {page.label}

@@ -51,12 +51,12 @@ export default function AboutPage() {
     {
       name: "Github",
       icon: FaGithub,
-      link: "https://github.com/romelBalungag",
+      link: "https://github.com/jaylordgasalao",
     },
     {
       name: "Facebook",
       icon: FaFacebook,
-      link: "https://www.facebook.com/romel.balungag.9",
+      link: "https://www.facebook.com/profile.php?id=61590864119788",
     },
   ]
 
@@ -93,7 +93,7 @@ export default function AboutPage() {
     <div>
 
       <div className="my-10 flex flex-col gap-6 lg:flex-row">
-        <div className="w-full rounded-md border border-transparent p-4 shadow-[0_0_1px_gray] sm:p-5">
+        <div className="w-full rounded-2xl border border-[#dce5df] bg-white p-5 sm:p-7">
           {/* Title */}
           <div className="mb-5 flex items-center gap-2 dark:text-gray-300">
             <BriefcaseBusiness className="h-6 w-6 sm:h-8 sm:w-8" />
@@ -104,7 +104,7 @@ export default function AboutPage() {
           </div>
 
           {/* About Description */}
-          <p className="text-justify text-sm leading-6 text-gray-800 sm:text-base dark:text-gray-300">
+          <p className="text-sm leading-7 text-[#52605b] sm:text-base">
             Hi there, I’m{" "}
             <span className="mx-1 rounded-md border border-gray-200 bg-gray-50 px-2 py-1 text-xs dark:border-gray-600 dark:bg-[#333333] dark:text-gray-300">
               Jaylord Gasalao
@@ -177,7 +177,7 @@ export default function AboutPage() {
       </div>
 
 
-      <div className="w-full rounded-md border border-transparent p-4 shadow-[0_0_1px_gray] sm:p-5">
+      <div className="w-full rounded-2xl border border-[#dce5df] bg-white p-5 sm:p-7">
         {/* Title */}
 
         <div className="mb-5 flex items-center gap-2">

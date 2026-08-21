@@ -8,22 +8,22 @@ export default function ProfileHeader() {
         <img
           src={Background}
           alt="Background Image"
-          className="h-40 w-full rounded-2xl object-cover sm:h-52 md:h-60"
+          className="h-40 w-full rounded-3xl object-cover sm:h-52 md:h-64"
         />
         <div className="-mt-16 ml-4 flex flex-col items-center gap-2 text-center sm:-mt-20 sm:ml-10 sm:flex-row sm:items-end sm:text-left">
           <div className="rounded-full">
             <img
               src={Profile}
               alt="Profile Picture"
-              className="w-28 rounded-full sm:w-32 md:w-40"
+              className="w-28 rounded-full border-8 border-[#f6f8f5] sm:w-32 md:w-40"
             />
           </div>
           <div className="sm:mx-4 sm:mb-4">
-            <h1 className="text-lg font-semibold text-gray-800 sm:text-xl md:text-2xl dark:text-gray-300">
-              Romel Balungag
+            <h1 className="text-xl font-bold tracking-tight text-[#1d2927] sm:text-2xl md:text-3xl">
+              Jaylord Gasalao
             </h1>
-            <p className="sm:text-md text-sm text-red-700 italic dark:text-gray-400">
-              Growing Developer
+            <p className="mt-1 text-sm font-medium text-[#176b63]">
+              Frontend developer in progress
             </p>
           </div>
         </div>

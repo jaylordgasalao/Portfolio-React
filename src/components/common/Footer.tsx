@@ -1,4 +1,5 @@
-import { MapPin } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
+import { Link } from "react-router";
 
 export function Footer() {
   const Pages = [
@@ -8,82 +9,64 @@ export function Footer() {
     { name: "Contact", href: "contact" },
   ];
 
-  const Resources = ["Github", "LinkedIn"];
-
   const ConnectContent = [
     { name: "Github", link: "https://github.com/jaylordgasalao" },
     { name: "Facebook", link: "https://www.facebook.com/profile.php?id=61590864119788" },
   ];
 
   return (
-    <div className="px-4 sm:px-6 md:px-16 lg:px-34">
-      <div className="py-8 sm:py-10 md:py-12 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-16 items-start mx-auto">
+    <footer className="border-t border-[#dce5df] px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto grid max-w-6xl gap-8 py-10 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-1">
-          <h2 className="font-semibold text-[16px] sm:text-[17px] md:text-[19px] text-gray-900 mb-1 sm:mb-2 dark:text-gray-300">
+          <h2 className="mb-2 text-base font-semibold text-[#1d2927]">
             Jaylord Gasalao
           </h2>
-          <p className="text-gray-700 text-xs sm:text-sm dark:text-gray-400">
-            Developer in Progress
+          <p className="text-sm text-[#52605b]">
+            Building thoughtful web experiences.
           </p>
-          <p className="text-gray-700 text-xs sm:text-sm flex items-center gap-1 dark:text-gray-400">
+          <p className="mt-1 flex items-center gap-1 text-sm text-[#52605b]">
             Cebu, Philippines <MapPin size={14} />
           </p>
         </div>
 
         <div>
-          <h1 className="font-semibold text-[16px] sm:text-[17px] md:text-[19px] text-gray-900 mb-1 sm:mb-2 dark:text-gray-300">
+          <h1 className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#1d2927]">
             Pages
           </h1>
           <ul className="flex flex-col gap-1">
-            {Pages.map((page, i) => (
-              <a href={`/${page.href}`} key={i} className="hover:underline">
-                <li className="text-gray-700 text-xs sm:text-sm dark:text-gray-400">
+            {Pages.map((page) => (
+              <li key={page.name}>
+                <Link to={page.href === "/" ? "/" : `/${page.href}`} className="text-sm text-[#52605b] hover:text-[#176b63]">
                   {page.name}
-                </li>
-              </a>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h1 className="font-semibold text-[16px] sm:text-[17px] md:text-[19px] text-gray-900 mb-1 sm:mb-2 dark:text-gray-300">
-            Resources
-          </h1>
-          <ul className="flex flex-col gap-1">
-            {Resources.map((resource, i) => (
-              <li
-                key={i}
-                className="text-xs sm:text-sm text-gray-700 dark:text-gray-400"
-              >
-                {resource}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
 
         <div>
-          <h1 className="font-semibold text-[16px] sm:text-[17px] md:text-[19px] text-gray-900 mb-1 sm:mb-2 dark:text-gray-300">
-            Contacts
+          <h1 className="mb-3 text-sm font-semibold uppercase tracking-wider text-[#1d2927]">
+            Elsewhere
           </h1>
           <ul className="flex flex-col gap-1">
             {ConnectContent.map((connect, i) => (
               <li
                 key={i}
-                className="text-xs sm:text-sm text-gray-700 cursor-pointer hover:underline dark:text-gray-400"
-                onClick={() => window.open(connect.link, "_blank")}
+                className="flex items-center gap-1 text-sm text-[#52605b] hover:text-[#176b63]"
               >
-                {connect.name}
+                <a href={connect.link} target="_blank" rel="noreferrer">{connect.name}</a>
+                <ArrowUpRight size={13} />
               </li>
             ))}
           </ul>
         </div>
       </div>
 
-      <div className="pb-6 sm:pb-8">
-        <h1 className="text-center text-xs sm:text-sm md:text-[16px] text-gray-600 dark:text-gray-300">
-          © 2026 Romel Balungag. All rights reserved.
+      <div className="mx-auto max-w-6xl border-t border-[#dce5df] py-5">
+        <h1 className="text-xs text-[#71807a]">
+          © 2026 Jaylord Gasalao. Built with React and Tailwind CSS.
         </h1>
       </div>
-    </div>
+    </footer>
   );
 }

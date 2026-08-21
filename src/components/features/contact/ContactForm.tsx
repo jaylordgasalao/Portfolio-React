@@ -6,70 +6,56 @@ export function ContactForm() {
   };
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-      <h3 className="text-2xl font-semibold text-slate-900">Reach Out!</h3>
-          <p className="mt-2 text-sm leading-6 text-slate-600">
-            Whether you’re looking to collaborate or just want to chat, I’d love to hear from you.
-          </p>
+    <div className="border-t border-[#dce5df] pt-8 lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0">
+      <h3 className="text-2xl font-bold text-[#1d2927]">Send a message</h3>
+      <p className="mt-2 max-w-md text-sm leading-6 text-[#60706a]">
+        Tell me a little about what you’re working on and I’ll get back to you soon.
+      </p>
 
-          <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
-            <div className="grid gap-4 md:grid-cols-2">
-              <div>
-                <label htmlFor="fname" className="block text-sm font-medium text-slate-700">
-                  First Name
-                </label>
-                <input
-                  id="fname"
-                  type="text"
-                  placeholder="First name"
-                  className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
-                />
-              </div>
+      <form className="mt-6 space-y-5" onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="fname" className="block text-sm font-medium text-[#1d2927]">
+              Name
+            </label>
+            <input
+              id="fname"
+              type="text"
+              placeholder="Your name"
+              className="mt-2 w-full rounded-lg border border-[#dce5df] bg-[#f6f8f5] px-4 py-3 text-sm text-[#1d2927] placeholder:text-[#71807a] outline-none transition focus:border-[#176b63] focus:bg-white focus:ring-2 focus:ring-[#c9ddd4]"
+            />
+          </div>
 
-              <div>
-                <label htmlFor="lname" className="block text-sm font-medium text-slate-700">
-                  Last Name
-                </label>
-                <input
-                  id="lname"
-                  type="text"
-                  placeholder="Last name"
-                  className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
-                />
-              </div>
-            </div>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-[#1d2927]">
+              Email
+            </label>
+            <input
+              id="email"
+              type="email"
+              placeholder="you@example.com"
+              className="mt-2 w-full rounded-lg border border-[#dce5df] bg-[#f6f8f5] px-4 py-3 text-sm text-[#1d2927] placeholder:text-[#71807a] outline-none transition focus:border-[#176b63] focus:bg-white focus:ring-2 focus:ring-[#c9ddd4]"
+            />
+          </div>
 
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-slate-700">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                placeholder="you@example.com"
-                className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
-              />
-            </div>
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-[#1d2927]">
+              Your message
+            </label>
+            <textarea
+              id="message"
+              placeholder="Write your message here..."
+              rows={5}
+              className="mt-2 w-full resize-y rounded-lg border border-[#dce5df] bg-[#f6f8f5] px-4 py-3 text-sm text-[#1d2927] placeholder:text-[#71807a] outline-none transition focus:border-[#176b63] focus:bg-white focus:ring-2 focus:ring-[#c9ddd4]"
+            />
+          </div>
 
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-slate-700">
-                How can I help you?
-              </label>
-              <textarea
-                id="message"
-                placeholder="Write your message here..."
-                rows={5}
-                className="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-100"
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="inline-flex w-full items-center justify-center rounded-xl bg-black px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
-            >
-              Send Message
-            </button>
-          </form>
+          <button
+            type="submit"
+            className="inline-flex w-full items-center justify-center rounded-lg bg-[#1d2927] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#176b63]"
+          >
+            Send message
+          </button>
+      </form>
     </div>
   );
 }

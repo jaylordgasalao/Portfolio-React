@@ -1,8 +1,7 @@
 import {
   Mail,
-  Phone,
+  MapPin,
   MessageSquare,
-  Clock,
 } from "lucide-react"
 
 import type { LucideIcon } from "lucide-react"
@@ -27,19 +26,18 @@ type Contact = {
 const contacts: Contact[] = [
   {
     heading: "Email",
-    subheading: "romelbalungag@gmail.com",
-    description: "I usually reply within an hour.",
+    subheading: "jaylordgasalao934@gmail.com",
+    description: "The best way to reach me",
     headingIcon: Mail,
-    descriptionIcon: Clock,
-    link: "mailto:romelbalungag@gmail.com",
+    descriptionIcon: Mail,
+    link: "mailto:jaylordgasalao934@gmail.com",
   },
   {
-    heading: "Phone",
-    subheading: "+63 946 872 9330",
-    description: "Available weekdays from 9AM to 6PM.",
-    headingIcon: Phone,
-    descriptionIcon: Clock,
-    link: "tel:+639468729330",
+    heading: "Based in",
+    subheading: "Cebu, Philippines",
+    description: "Open to thoughtful collaborations",
+    headingIcon: MapPin,
+    descriptionIcon: MapPin,
   },
 ]
 
@@ -59,21 +57,27 @@ const socials: Social[] = [
   },
   {
     name: "GitHub",
-    href: "https://github.com/romelBalungag",
+    href: "https://github.com/jaylordgasalao",
     icon: FaGithub,
   },
   {
     name: "Facebook",
-    href: "https://www.facebook.com/romel.balungag.9",
+    href: "https://www.facebook.com/profile.php?id=61590864119788",
     icon: FaFacebook,
   },
 ]
 
 export function ContactInfo() {
   return (
-    <div className="my-8">
-      <div className="flex w-full flex-col gap-4">
-        {/* Contact Cards */}
+    <div className="lg:my-0">
+      <div className="flex w-full flex-col gap-8">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#176b63]">Contact</p>
+          <h3 className="mt-3 text-2xl font-bold tracking-tight text-[#1d2927]">Let’s keep in touch.</h3>
+          <p className="mt-3 max-w-sm text-sm leading-6 text-[#60706a]">
+            Whether it’s a project, a question, or a good idea, I’m always happy to hear from you.
+          </p>
+        </div>
 
         {contacts.map(
           ({
@@ -86,12 +90,10 @@ export function ContactInfo() {
           }) => (
             <div
               key={heading}
-              className="flex flex-col gap-3 rounded-lg bg-[#222223] p-6"
+              className="border-t border-[#dce5df] pt-5"
             >
-              {/* Heading */}
-
-              <h3 className="flex items-center gap-3 text-lg font-medium text-gray-200">
-                <Icon className="h-9 w-9 rounded-md bg-[#343434] p-2" />
+              <h3 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-[#52605b]">
+                <Icon className="h-5 w-5 text-[#176b63]" />
                 {heading}
               </h3>
 
@@ -100,19 +102,19 @@ export function ContactInfo() {
               {link ? (
                 <a
                   href={link}
-                  className="text-[16px] text-gray-300 transition-colors hover:text-white"
+                  className="mt-2 block text-base font-semibold text-[#1d2927] transition-colors hover:text-[#176b63]"
                 >
                   {subheading}
                 </a>
               ) : (
-                <p className="text-[16px] text-gray-300">
+                <p className="mt-2 text-base font-semibold text-[#1d2927]">
                   {subheading}
                 </p>
               )}
 
               {/* Description */}
 
-              <p className="flex items-center gap-2 text-sm text-gray-400">
+              <p className="mt-2 flex items-center gap-2 text-sm text-[#71807a]">
                 <Icon2 className="h-4 w-4" />
                 {description}
               </p>
@@ -121,13 +123,13 @@ export function ContactInfo() {
         )}
 
 
-        <div className="flex flex-col gap-3 rounded-lg bg-[#222223] p-6">
-          <h2 className="flex items-center gap-3 text-lg font-medium text-gray-200">
-            <MessageSquare className="h-9 w-9 rounded-md bg-[#343434] p-2" />
-            Connect with me
+        <div className="border-t border-[#dce5df] pt-5">
+          <h2 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-[#52605b]">
+            <MessageSquare className="h-5 w-5 text-[#176b63]" />
+            Elsewhere
           </h2>
 
-          <div className="mt-2 grid grid-cols-2 gap-4 sm:grid-cols-3">
+          <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3">
             {socials.map(({ icon: Icon, name, href }) => (
               <a
                 key={name}
@@ -135,9 +137,10 @@ export function ContactInfo() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={name}
-                className="group flex items-center justify-center rounded-lg border border-gray-600 bg-transparent py-4 transition-all duration-200 hover:bg-[#333333]"
+                className="group flex items-center gap-2 text-sm text-[#52605b] transition-colors hover:text-[#176b63]"
               >
-                <Icon className="h-7 w-7 rounded-md p-1 text-gray-300 opacity-90 transition-all duration-200 group-hover:bg-[#464646]" />
+                <Icon className="h-4 w-4 opacity-90 transition-all duration-200 group-hover:text-[#176b63]" />
+                <span>{name}</span>
               </a>
             ))}
           </div>
