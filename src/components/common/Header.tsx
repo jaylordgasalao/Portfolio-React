@@ -15,8 +15,8 @@ export function Header({ pages }: HeaderProps) {
     <header className="sticky top-0 z-30 shadow bg-white">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-6 md:px-6 lg:px-8">
         <div>
-          <h1 className="text-lg font-bold tracking-tight text-black md:text-xl">Romel Balungag</h1>
-          <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-gray-600">Aspiring Dev</p>
+          <h1 className="text-lg font-bold tracking-tight text-black md:text-xl">Jaylord Gasalao</h1>
+          <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-gray-600">Developer in Progress</p>
         </div>
 
         <nav className="flex items-center gap-1 bg-white" aria-label="Main navigation">

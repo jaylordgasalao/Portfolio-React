@@ -1,5 +1,5 @@
-import Profile from "../../../assets/romel-kyutie.jpg";
-import Background from "../../../assets/bg.png";
+import Profile from "../../../assets/profile.jpg";
+import Background from "../../../assets/bg.jpg";
 
 export default function ProfileHeader() {
   return (

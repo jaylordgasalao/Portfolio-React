@@ -11,8 +11,8 @@ export function Footer() {
   const Resources = ["Github", "LinkedIn"];
 
   const ConnectContent = [
-    { name: "Github", link: "https://github.com/MrKabado" },
-    { name: "Facebook", link: "https://www.facebook.com/romel.balungag.9" },
+    { name: "Github", link: "https://github.com/jaylordgasalao" },
+    { name: "Facebook", link: "https://www.facebook.com/profile.php?id=61590864119788" },
   ];
 
   return (
@@ -20,10 +20,10 @@ export function Footer() {
       <div className="py-8 sm:py-10 md:py-12 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-16 items-start mx-auto">
         <div className="flex flex-col gap-1">
           <h2 className="font-semibold text-[16px] sm:text-[17px] md:text-[19px] text-gray-900 mb-1 sm:mb-2 dark:text-gray-300">
-            Romel Balungag
+            Jaylord Gasalao
           </h2>
           <p className="text-gray-700 text-xs sm:text-sm dark:text-gray-400">
-            Aspiring Web Developer
+            Developer in Progress
           </p>
           <p className="text-gray-700 text-xs sm:text-sm flex items-center gap-1 dark:text-gray-400">
             Cebu, Philippines <MapPin size={14} />
